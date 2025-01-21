@@ -7,7 +7,7 @@
     ansible.builtin.debug:
       msg: "Hello World"
   - name: install nginx
-    become: yes
+    become: yes # this command can be given here as well
     ansible.builtin.package:
       name: nginx
       state: present
