@@ -4,9 +4,9 @@
   tasks:
     - name: install nginx
       ansible.builtin.package:  # this can make ansible heterogeneous---on any platform we can run#ansible.builtin.dnf ----- homogeneous (only on redhat enterprise we can run this package)
-        name: install nginx
+        name: nginx
         state: present # present = install; absent = remove
-    - name: start nginx
+    - name: start the nginx
       ansible.builtin.service:
-        name: start the service
+        name: nginx
         state: started
