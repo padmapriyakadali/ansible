@@ -4,9 +4,11 @@
   vars_prompt:
   - name: COURSE #here COURSE is a varaible, whatever the data given in prompt field will be stored in this variable
     prompt: please enter your course name
+    private: false #it is not confidential information
   - name: DURATION
     prompt: please enter duration
   - name: TRAINER
+    private: false
     prompt: please enter trainer name
   tasks: 
   - name: print variables file information
