@@ -8,6 +8,6 @@
         name : install nginx
         state: present # present = install; absent = remove
     - name : start nginx
-      ansible.builtin.service
+      ansible.builtin.service:
         name : start the service
         state : started
