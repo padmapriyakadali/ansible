@@ -7,6 +7,10 @@
     TRAINER: SIVAREDDY
   tasks:
   - name: print variables
+    vars: 
+      COURSE: ANSIBLE
     ansible.builtin.debug:
       msg: " I have joined {{ COURSE }} course, and it's duration is {{ DURATION }}. Trainer is {{ TRAINER }}"
-  
+  - name: print variables 
+    ansible.builtin.debug: 
+      msg: " I have joined {{ COURSE }} course, and it's duration is {{ DURATION }}. Trainer is {{ TRAINER }}"
