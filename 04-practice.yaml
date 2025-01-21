@@ -1,0 +1,5 @@
+- name: PING THE SERVER
+  hosts: web
+  tasks:
+    - name: ping the server
+      ansilble.builtin.ping:
