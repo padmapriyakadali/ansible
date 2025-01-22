@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars: #play-level variables
-    GREET: "PLAY-LEVEL"
+    #GREET: "PLAY-LEVEL"
   tasks:
   - name: print variables
     ansible.builtin.debug:
