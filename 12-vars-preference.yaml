@@ -1,0 +1,9 @@
+- name: print variables according to preference
+  hosts: local
+  connection: local
+  vars: #play-level variables
+    GREET: "PLAY-LEVEL"
+  tasks:
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "Hello from {{ GREET }}"
