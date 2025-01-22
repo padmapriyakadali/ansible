@@ -1,8 +1,8 @@
 - name: print variables according to preference
   hosts: local
   connection: local
-  vars: #play-level variables
-    GREET: "PLAY-LEVEL"
+  # vars: #play-level variables
+  #   GREET: "PLAY-LEVEL"
   # vars_files:
   # - variables.yaml
   # vars_prompt:
