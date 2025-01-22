@@ -1,17 +1,17 @@
 - name: print variables according to preference
   hosts: local
   connection: local
-  # vars: #play-level variables
-  #   GREET: "PLAY-LEVEL"
-  # vars_files:
-  # - variables.yaml
-  # vars_prompt:
-  # - name: GREET
-  #   prompt: Please enter the value
-  #   private: false
+  vars: #play-level variables
+    GREET: "PLAY-LEVEL"
+  vars_files:
+  - variables.yaml
+  vars_prompt:
+  - name: GREET
+    prompt: Please enter the value
+    private: false
   tasks:
   - name: print variables
-    # vars: 
-    #   GREET: "TASK-LEVEL"
+    vars: 
+      GREET: "TASK-LEVEL"
     ansible.builtin.debug:
       msg: "Hello from {{ GREET }}"
