@@ -1,7 +1,7 @@
-- name: print the facts
+- name: print the factse
   hosts: web
   become: yes
   tasks:
-  - name: print the facts
+  - name: print the factse
     ansible.builtin.debug:
-      msg: "print the facts {{ ansible_facts }}"
+      msg: "print the factse {{ ansible_facts }}"
