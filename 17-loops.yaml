@@ -1,4 +1,4 @@
-- name: run the loop
+- name: loop
   hosts: local
   connections: local
   tasks:
