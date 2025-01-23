@@ -1,5 +1,6 @@
 - name: print the facts
   hosts: web
+  become: yes
   tasks:
   - name: print the facts
     ansible.builtin.debug:
