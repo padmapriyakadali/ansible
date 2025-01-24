@@ -10,3 +10,12 @@
   - name: Convert string to list
     ansible.builtin.debug:
       msg: "Fruits are {{ fruits | split (',') }}"
+  - name: Convert map to list
+    vars:
+      course:
+        name: ansible
+        duration: 10hrs
+        trainer: sivareddy
+    ansible.builtin.debug:
+      msg : "Course info {{ course | dict2items }}" #dictonary to items
+       
