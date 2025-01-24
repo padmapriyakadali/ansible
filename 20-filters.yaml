@@ -43,6 +43,6 @@
       msg: "Min number is {{ numbers | min }}, max number is {{ numbers | max }} "
   - name: check the valid IP
     vars:
-      IP: 192.256.53.13
+      IP: 192.25.53.13
     ansible.builtin.debug:
       msg: "{{ IP | ansible.utils.ipaddr }}"
