@@ -3,6 +3,10 @@
   connection: local
   tasks:
   - name: execute ls command
-    #ansible.builtin.command: ls -ltr > /tmp/output.txt
-    #ansible.builtin.shell: ls -ltr > /tmp/output.txt
-    ansible.builtin.command: ls -ltr
+    #ansible.builtin.command: ls -ltr > /tmp/output.txt ----will not work
+    ansible.builtin.shell: ls -ltr > /tmp/output.txt
+    #ansible.builtin.command: ls -ltr --- will work
+    register: command_result
+  - name: print the stored output
+    ansible.builtin.debug:
+      msg: "Stored output is {{ command_result }}"
