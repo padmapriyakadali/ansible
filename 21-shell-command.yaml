@@ -8,7 +8,7 @@
 
   - name: execute command module
     ansible.builtin.command: ls -ltr
-    register: command_result
+  register: command_result  #to store output
 
   - name: print the stored output
     ansible.builtin.debug:
