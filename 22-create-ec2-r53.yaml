@@ -12,6 +12,15 @@
     - frontend
 
   tasks:
+  - name: Install python libraries
+    ansible.builtin.pip:
+     name: "{{ item }}"
+     executable: pip3.9
+     loop:
+     - botocore
+     - boto3
+
+
   - name: create EC2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
