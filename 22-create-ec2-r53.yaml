@@ -53,7 +53,7 @@
     loop: "{{ ec2_info.results }}" 
 
   - name: create public ip for frontend
-     amazon.aws.route53:
+    amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
       record: "{{ zone }}"
