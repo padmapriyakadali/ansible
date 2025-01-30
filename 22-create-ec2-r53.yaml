@@ -63,4 +63,4 @@
       wait: true
       overwrite: true # if any record is created earlier, overwrite that
     loop: "{{ ec2_info.results }}" 
-    when: item.item == frontend
+    when: item.item == "frontend"
